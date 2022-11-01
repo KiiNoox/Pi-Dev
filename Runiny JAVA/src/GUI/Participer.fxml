@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="980.0" styleClass="parent" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ParticiperController">
+   <children>
+      <Pane prefHeight="680.0" prefWidth="326.0" styleClass="pane">
+         <children>
+            <Label layoutX="27.0" layoutY="44.0" prefHeight="25.0" prefWidth="144.0" text="BONJOUR" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Historic" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="326.0" prefHeight="680.0" prefWidth="654.0" styleClass="pane1">
+         <children>
+            <ListView fx:id="tfliste" layoutX="65.0" layoutY="82.0" prefHeight="361.0" prefWidth="344.0" />
+            <Button fx:id="idparti" layoutX="196.0" layoutY="449.0" mnemonicParsing="false" onAction="#participer" prefHeight="25.0" prefWidth="82.0" text="Participer" />
+            <Label layoutX="77.0" layoutY="14.0" prefHeight="63.0" prefWidth="351.0" text="Notre Evénements ">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="msg" layoutX="19.0" layoutY="490.0" prefHeight="92.0" prefWidth="553.0" />
+         </children></Pane>
+      <Button layoutX="35.0" layoutY="235.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="250.0" styleClass="blue-btn2" text="Planning" />
+      <Button layoutX="88.0" layoutY="174.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="144.0" styleClass="blue-btn2" text="Reservation" />
+      <Button layoutX="13.0" layoutY="307.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="294.0" styleClass="blue-btn2" text="Forum">
+         <font>
+            <Font name="System Bold" size="54.0" />
+         </font>
+      </Button>
+      <Button fx:id="Pbutton" layoutX="109.0" layoutY="382.0" mnemonicParsing="false" onAction="#gotops" styleClass="blue-btn2" text="Payement" />
+      <Button layoutX="96.0" layoutY="537.0" mnemonicParsing="false" styleClass="blue-btn2" text="Abonnement" />
+      <Button fx:id="pbut" layoutX="111.0" layoutY="466.0" mnemonicParsing="false" onAction="#pbutclick" styleClass="blue-btn2" text="Participer" />
+   </children>
+</AnchorPane>

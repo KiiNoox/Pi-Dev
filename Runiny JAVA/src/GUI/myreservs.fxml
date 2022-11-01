@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="980.0" styleClass="parent" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MyreservsController">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="680.0" prefWidth="326.0" styleClass="pane">
+         <children>
+            <Button layoutX="56.0" layoutY="179.0" mnemonicParsing="false" styleClass="blue-btn2" text="Gestion Utilisateurs" />
+            <Label layoutX="56.0" layoutY="35.0" prefHeight="50.0" prefWidth="177.0" styleClass="tf_box" text="Dashboard">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+            <Button fx:id="idparticipant" layoutX="72.0" layoutY="253.0" mnemonicParsing="false" onAction="#pbutclick" styleClass="blue-btn2" text="Participant" />
+            <Button fx:id="Pbutton" layoutX="75.0" layoutY="320.0" mnemonicParsing="false" onAction="#gotops" styleClass="blue-btn2" text="Payement" />
+            <Button fx:id="evenb" layoutX="70.0" layoutY="397.0" mnemonicParsing="false" onAction="#event" styleClass="blue-btn2" text="Evenement" />
+            <Button layoutX="67.0" layoutY="511.0" mnemonicParsing="false" onAction="#reserva" styleClass="blue-btn2" text="Reservation" />
+            <Button layoutX="86.0" layoutY="456.0" mnemonicParsing="false" onAction="#snc" styleClass="blue-btn2" text="Seance" />
+         </children></Pane>
+      <Pane layoutX="325.0" prefHeight="680.0" prefWidth="654.0" styleClass="pane1">
+         <children>
+            <Label layoutX="246.0" layoutY="35.0" prefHeight="35.0" prefWidth="136.0" text="Reservation" textFill="#0070d7">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="537.0" layoutY="628.0" mnemonicParsing="false" onAction="#OnClickedPrint" prefHeight="25.0" prefWidth="103.0" text="Imprimer ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <DatePicker fx:id="date" layoutX="26.0" layoutY="365.0" prefHeight="54.0" prefWidth="183.0" promptText="DATE" />
+            <Spinner fx:id="HH" layoutX="42.0" layoutY="427.0" prefHeight="40.0" prefWidth="61.0" />
+            <Spinner fx:id="MM" layoutX="130.0" layoutY="427.0" prefHeight="40.0" prefWidth="61.0" />
+            <ComboBox fx:id="coach" layoutX="26.0" layoutY="219.0" prefHeight="54.0" prefWidth="183.0" promptText="COACH" />
+            <ComboBox fx:id="sll" layoutX="26.0" layoutY="287.0" prefHeight="54.0" prefWidth="183.0" promptText="SALLE" />
+            <Button fx:id="resSPRi" layoutX="24.0" layoutY="487.0" mnemonicParsing="false" onAction="#reSpriv" prefHeight="40.0" prefWidth="177.0" text="Demander Reservation">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="mod" layoutX="27.0" layoutY="538.0" mnemonicParsing="false" onAction="#edit" prefHeight="40.0" prefWidth="177.0" text="Modifier">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="supp" layoutX="27.0" layoutY="588.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="177.0" text="Supprimer">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tl" layoutX="350.0" layoutY="158.0" onMouseClicked="#mouseclick" prefHeight="305.0" prefWidth="157.0">
+               <columns>
+                  <TableColumn fx:id="ddt" prefWidth="155.0" text="Date" />
+               </columns>
+            </TableView>
+            <ComboBox fx:id="client" layoutX="26.0" layoutY="150.0" prefHeight="54.0" prefWidth="183.0" promptText="Client" />
+            <Label fx:id="errorlab" layoutX="218.0" layoutY="492.0" prefHeight="17.0" prefWidth="177.0" textFill="RED">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </children>
+</AnchorPane>

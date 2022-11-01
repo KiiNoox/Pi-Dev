@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="980.0" styleClass="parent" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ReservcompController">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="680.0" prefWidth="326.0" styleClass="pane">
+         <children>
+            <Button fx:id="snc" layoutX="25.0" layoutY="225.0" mnemonicParsing="false" onAction="#seance" prefHeight="72.0" prefWidth="250.0" styleClass="blue-btn2" text="Planning" />
+            <Button layoutX="78.0" layoutY="164.0" mnemonicParsing="false" onAction="#reservation" prefHeight="40.0" prefWidth="144.0" styleClass="blue-btn2" text="Reservation" />
+            <Button fx:id="form" layoutX="3.0" layoutY="297.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="294.0" styleClass="blue-btn2" text="Forum">
+               <font>
+                  <Font name="System Bold" size="54.0" />
+               </font>
+            </Button>
+            <Button fx:id="paym" layoutX="99.0" layoutY="372.0" mnemonicParsing="false" styleClass="blue-btn2" text="Payement" />
+            <Button fx:id="ev" layoutX="94.0" layoutY="452.0" mnemonicParsing="false" styleClass="blue-btn2" text="Evenement" />
+            <Label layoutX="27.0" layoutY="44.0" prefHeight="25.0" prefWidth="144.0" text="BONJOUR" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Historic" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="abo" layoutX="86.0" layoutY="527.0" mnemonicParsing="false" styleClass="blue-btn2" text="Abonnement" />
+         </children>
+      </Pane>
+      <Pane layoutX="325.0" prefHeight="680.0" prefWidth="654.0" styleClass="pane1">
+         <children>
+            <Label alignment="CENTER" layoutX="263.0" layoutY="28.0" prefHeight="52.0" prefWidth="128.0" text="Reservation" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="anchorpane_center" layoutX="12.0" layoutY="64.0" prefHeight="459.0" prefWidth="638.0">
+         <children>
+            <AnchorPane fx:id="anchorpane_left" layoutX="14.0" layoutY="14.0" prefHeight="439.0" prefWidth="274.0">
+               <children>
+                  <TextField fx:id="txt_firstname" layoutX="14.0" layoutY="80.0" prefHeight="25.0" prefWidth="244.0" promptText="Firstname" />
+                  <TextField fx:id="txt_lastname" layoutX="15.0" layoutY="177.0" prefHeight="25.0" prefWidth="244.0" promptText="Lastname" />
+                  <ComboBox fx:id="combo_gender" layoutX="15.0" layoutY="264.0" prefHeight="25.0" prefWidth="244.0" promptText="Gender" />
+                  <ComboBox fx:id="combo_position" layoutX="15.0" layoutY="356.0" prefHeight="25.0" prefWidth="207.0" promptText="Position" />
+                  <Button fx:id="btn_position" layoutX="229.0" layoutY="353.0" text="+">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_save" layoutX="15.0" layoutY="400.0" prefHeight="25.0" prefWidth="55.0" text="Save" />
+                  <Button fx:id="btn_edit" layoutX="135.0" layoutY="400.0" prefHeight="25.0" prefWidth="55.0" text="Edit" />
+                  <Button fx:id="btn_delete" layoutX="195.0" layoutY="400.0" prefHeight="25.0" prefWidth="55.0" text="Delete" />
+                  <Button fx:id="btn_add_new" layoutX="75.0" layoutY="400.0" prefHeight="25.0" prefWidth="55.0" text="New" />
+                  <ComboBox layoutX="14.0" layoutY="105.0" prefWidth="150.0" />
+                  <ComboBox layoutX="14.0" layoutY="202.0" prefWidth="150.0" />
+                  <DatePicker layoutX="8.0" layoutY="297.0" />
+                  <Spinner layoutX="15.0" layoutY="322.0" prefHeight="25.0" prefWidth="55.0" />
+                  <Spinner layoutX="170.0" layoutY="322.0" prefHeight="25.0" prefWidth="55.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorpane_right" layoutX="294.0" layoutY="14.0" prefHeight="439.0" prefWidth="341.0">
+               <children>
+                  <TableView fx:id="tblview" layoutX="9.0" layoutY="35.0" prefHeight="390.0" prefWidth="326.0">
+                    <columns>
+                      <TableColumn fx:id="column_firstname" prefWidth="150.0" text="Firstname" />
+                      <TableColumn fx:id="column_lastname" prefWidth="174.0" text="Lastname" />
+                        <TableColumn fx:id="column_gender" prefWidth="91.0" text="Gender" />
+                        <TableColumn fx:id="column_position" prefWidth="145.0" text="Position" />
+                        <TableColumn fx:id="column_ID" prefWidth="11.0" text="ID_hidden" visible="false" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="btn_print_preview" layoutX="213.0" layoutY="2.0" prefHeight="25.0" prefWidth="122.0" text="Print Preview" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+            <Button layoutX="14.0" layoutY="626.0" mnemonicParsing="false" onAction="#retour" prefHeight="40.0" prefWidth="103.0" text="RETOUR">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="226.0" layoutY="588.0" mnemonicParsing="false" onAction="#OnClickedPrint" text="Imprimer Reservations">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children></Pane>
+   </children>
+</AnchorPane>
